@@ -1,6 +1,6 @@
 //primitive and reference data types
-//primitive: call by value String,Number,null,Boolean,undefined,Symbol,BigInt
-//reference: call by reference array,objects,functions
+//primitive: Stack: call by value String,Number,null,Boolean,undefined,Symbol,BigInt
+//reference: Heap: call by reference array,objects,functions
 const id=Symbol('123')
 const id2=Symbol('123')
 console.log(id);
@@ -19,5 +19,5 @@ let myObj={
 
 const myFunction=function(){
     console.log("Hello World");
-}
+} 
 
