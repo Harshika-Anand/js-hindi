@@ -1,4 +1,4 @@
-/*const user={
+const user={
     username:"harshika",
     price:999,
 
@@ -37,7 +37,7 @@ console.log(add(3,5));
 
 const myArr=[1,2,3,4,5]
 //console.log(()=>{})//anonymous function
-*/
+
 //Immediately Invoked Function Expression (IIfe)
 
 //()(), first one is definition, the second one will act as a function call
@@ -56,3 +56,27 @@ const myArr=[1,2,3,4,5]
 //Js is single threaded
 
 //Js execution context
+/* 
+
+1)Global execution context
+2)Function execution context
+3)Eval execution context
+
+js code runs in 2 phases:
+1)Memory creation phase
+2)Execution phase:
+
+a)global execution phase, located in this
+b)memory phase: variables collected and undefined is put in them, functions mein function definitions jaati hain (cycle1)
+c)execution phase:(cycle2) correct values go in the variables, nothing for functions, function callls create their seperate execution context, jimein 
+  hai new variable environment and execution thread.
+
+call stack: LIFO: one{two{three}}
+|     three()        |
+|     two()          |
+|      one()         |
+|_global exe_________|
+
+
+*/
+ 
