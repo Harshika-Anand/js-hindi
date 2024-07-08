@@ -1,7 +1,7 @@
 const name="Harshika"
 const repoCount=50
 
-//string interpolation
+//string interpolation, template literals
 
 console.log(`Hello im ${name} and my repo count is ${repoCount}`);
 
