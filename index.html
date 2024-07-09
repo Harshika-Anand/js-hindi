@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,4 +18,40 @@
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
 </body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai & Code DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent1 = document.querySelector('.parent');
+    console.log(parent1);
+    console.log(parent1.children[1].innerHTML);
+    console.log(parent1.firstElementChild); 
+    const div=document.createElement('div')
+    div.className="main"
+    div.id="myId" 
+    div.setAttribute("title","generated title")
+    div.style.backgroundColor="green"
+    div.style.padding="12px"
+  //  div.innerText="Chai aur Code"
+    document.createTextNode("Chai aur Code")
+    div.appendChild(addText)
+    document.body.appendChild(div)
+</script>
 </html>
+<!--.parentElement, nextElementSibling(monday ka bhai tuesday)-->
+
+
