@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+
+    <script>
+
+        function addLang(langName) {
+            const li = document.createElement('li');
+            li.innerHTML = `${langName}`; // Use backticks for template literals
+            document.querySelector('.language').appendChild(li); 
+        }
+
+        addLang("Python");
+        addLang("Cpp");
+
+        function adaptLang(langName)
+        {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+        }
+
+        adaptLang("golang")
+
+        //Edit values
+        const secondLang=document.querySelector("li:nth-child(2)")
+       // secondLang.innerHTML="Mojo" //This is correct but meh as ismein pura tree traverse karna padega
+        const newli = document.createElement('li')
+        newli.textContent="Mojo"
+        secondLang.replaceWith(newli)
+
+        //edit
+        const firstLang=document.querySelector("li:first-child")
+        firstLang.outerHTML='<li>TypeScript</li>'
+
+        //remove
+        const lastLang=document.querySelector('li:last-child')
+        lastLang.remove()
+    </script>
+</body>
+</html>
