@@ -14,6 +14,18 @@
 4	DONE	The operation is complete.
 </body>
 <script>
-   
+   //xml ki request is ajax request
+   const requestURL='https://api.github.com/users/Harshika-Anand'
+   const xhr=new XMLHttpRequest() //iss method ke through we send requests
+   xhr.open('GET',requestURL)
+   xhr.onreadystatechange=function(){
+    console.log(xhr.readyState);
+    if(xhr.readyState===4)
+   {
+    const data=JSON.parse(this.responseText)//converts string to a json object
+    console.log(data.followers);//gives undefined as data type toh string hai, mostly we get the data in string
+   }
+  }
+   xhr.send()
 </script>
 </html>
